@@ -1,0 +1,110 @@
+.video-card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+  
+  .video-thumbnail {
+    overflow: hidden;
+    position: relative;
+    height: 12rem;
+    margin: 0.5rem;
+}
+  
+  @media (min-width: 768px) {
+    .video-thumbnail {
+      border-radius: 0.75rem;
+      height: 10rem;
+    }
+  }
+  
+  .thumbnail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .video-info {
+    margin-top: 0.75rem;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .video-author-info {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .author-avatar {
+    display: flex;
+    overflow: hidden;
+    border-radius: 50%;
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+  
+  .avatar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .author-details {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    margin-left: 3px;
+  }
+  
+  .video-title {
+    font-size: 1rem;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  
+  .author-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+  }
+  
+  .verified-icon {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.75rem;
+    margin-left: 0.25rem;
+  }
+  
+  .video-stats {
+    display: flex;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .video-dot {
+    display: flex;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    top: -10px;
+    margin-left: 0.25rem;
+  }
+  
+  .video-published-time {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  

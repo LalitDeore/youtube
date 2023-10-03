@@ -1,0 +1,20 @@
+.custom-flex {
+    display: flex;
+    flex-direction: row;
+    height: calc(100% - 56px);
+  }
+  
+  .custom-grow {
+    overflow-y: auto;
+    height: 100%;
+    background-color: #000000;
+    width: calc(100% - 240px);
+  }
+  
+  .custom-grid {
+    display: grid;
+    padding: 1.25rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+  

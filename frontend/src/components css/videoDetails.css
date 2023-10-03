@@ -1,0 +1,204 @@
+.video-details {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: calc(100% - 56px);
+    background-color: #000000;
+  }
+  
+@media (max-width: 767px) {
+    .video-details {
+      flex-direction: column;
+      height: auto;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .video-details {
+      flex-direction: row;
+    }
+  }
+  
+  .video-player {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media (min-width: 1024px) {
+    .video-player {
+      flex-direction: row;
+    }
+  }
+  .video-player-info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    overflow-y: auto;
+  }
+  
+  @media (min-width: 1024px) {
+    .video-player-info {
+      width: calc(100% - 350px);
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .video-player-info {
+      width: calc(100% - 400px);
+    }
+  }
+  
+  .react-player {
+    height: 200px; /* Default height for small screens */
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+  
+  @media (min-width: 768px) {
+    /* Medium-sized screens */
+    .react-player {
+      height: 400px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    /* Large screens */
+    .react-player {
+      height: 400px;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    /* Extra-large screens */
+    .react-player {
+      height: 550px;
+    }
+  }
+
+  .video-title {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.875rem; /* Equivalent to text-sm in Tailwind CSS */
+    line-height: 1.25rem; /* Equivalent to md:text-xl in Tailwind CSS */
+    margin-top: 1rem; /* Equivalent to mt-4 in Tailwind CSS */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  .video-author-info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 1rem; /* Equivalent to mt-4 in Tailwind CSS */
+  }
+  
+  /* For medium-sized screens and above */
+  @media (min-width: 768px) {
+    .video-author-info {
+      flex-direction: row;
+    }
+  }
+  .video-author {
+    display: flex;
+    align-items: flex-start; /* Equivalent to items-start in Tailwind CSS */
+  }
+  .video-author-img {
+    display: flex;
+    width: 2.75rem; /* Equivalent to w-11 in Tailwind CSS */
+    height: 2.75rem; /* Equivalent to h-11 in Tailwind CSS */
+    border-radius: 50%; /* Equivalent to rounded-full in Tailwind CSS */
+    overflow: hidden;
+  }
+  .author-avatar-image {
+    width: 100%; /* Equivalent to w-full in Tailwind CSS */
+    height: 100%; /* Equivalent to h-full in Tailwind CSS */
+    object-fit: cover; /* Equivalent to object-cover in Tailwind CSS */
+  }
+
+  .video-details {
+    display: flex; /* Equivalent to flex in Tailwind CSS */
+    flex-direction: column; /* Equivalent to flex-col in Tailwind CSS */
+    margin-left: 0.75rem; /* Equivalent to ml-3 in Tailwind CSS */
+  }
+
+  .video-title {
+    color: #ffffff; /* Equivalent to text-white in Tailwind CSS */
+    font-size: 1.125rem; /* Equivalent to text-md in Tailwind CSS */
+    font-weight: 600; /* Equivalent to font-semibold in Tailwind CSS */
+    display: flex; /* Equivalent to flex in Tailwind CSS */
+    align-items: center; /* Equivalent to items-center in Tailwind CSS */
+  }
+
+  .verified-icon {
+    color: rgba(255, 255, 255, 0.5); /* Equivalent to text-white/[0.5] in Tailwind CSS */
+    font-size: 0.75rem; /* Equivalent to text-[12px] in Tailwind CSS */
+    margin-left: 0.25rem; /* Equivalent to ml-1 in Tailwind CSS */
+  }
+
+  .video-stats {
+    color: rgba(255, 255, 255, 0.7); /* Equivalent to text-white/[0.7] in Tailwind CSS */
+    font-size: 0.875rem; /* Equivalent to text-sm in Tailwind CSS */
+  }
+  
+  .video-like {
+    display: flex; 
+padding-left: 1.5rem;
+padding-right: 1.5rem; 
+justify-content: center; 
+align-items: center; 
+border-radius: 1.5rem; 
+height: 2.75rem; 
+flex-direction: row;
+  }
+  .video-like-icon {
+    margin-right: 0.5rem; 
+font-size: 1.25rem;
+line-height: 1.75rem; 
+color: #ffffff; 
+
+
+
+  }
+    
+
+  .video-views {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    height: 2.75rem; 
+    padding: 0.75rem 1.5rem; 
+    border-radius: 1.5rem; 
+    background-color: rgba(255, 255, 255, 0.15); 
+    margin-left: 1rem;
+  }
+  
+  .video-suggestions {
+    display: flex; 
+    overflow-y: auto; 
+    padding-left: 1rem;
+    padding-right: 1rem; 
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem; 
+    flex-direction: column; 
+  }
+
+@media (min-width: 1024px) { 
+    .video-suggestions {
+      width: 350px;
+    }
+}
+  @media (min-width: 1280px) { 
+    .video-suggestions {
+      width: 400px;
+    }
+   }
+  
+  

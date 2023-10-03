@@ -1,0 +1,23 @@
+.Left-nav-menu-item{
+    display: flex; 
+    padding-left: 0.75rem;
+    padding-right: 0.75rem; 
+    align-items: center; 
+    border-radius: 0.5rem; 
+    height: 2.5rem; 
+    font-size: 0.875rem;
+    line-height: 1.25rem; 
+    color: #ffffff; 
+    cursor: pointer; 
+    margin-bottom: 1px;
+}
+
+.Left-nav-menu-item:hover {
+   background-color:  rgb(255 255 255 / 0.15);
+  }
+
+.nav-text{
+    
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}

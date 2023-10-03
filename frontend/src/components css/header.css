@@ -1,0 +1,248 @@
+.header-container {
+    display: flex;
+    position: sticky;
+    top: 0;
+    padding-left: 1rem;
+    z-index: 10;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.5rem;
+    background-color: black;
+    padding-right: 1rem;
+  }
+  
+@media (min-width: 768px) {
+    .header-container {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    height: 1.25rem;
+}
+
+ .mobile-menu-toggle{  
+    display: flex; 
+    align-items: center; 
+    border-radius: 9999px; 
+    width: 2.5rem; 
+    height: 2.5rem; 
+    cursor: pointer; 
+    justify-content: center;
+}
+
+@media (min-width: 768px) { 
+    .mobile-menu-toggle{ 
+        margin-right: 1.5rem; 
+        display: none; 
+ }
+}
+
+.mobile-menu-toggle:hover {
+ background: #303030;
+ }
+
+ .icon{
+     color: #ffffff; 
+     font-size: 1.25rem;
+     line-height: 1.75rem; 
+ }
+
+ .logo{
+     display: flex; 
+     align-items: center; 
+     height: 1.25rem; 
+ }
+
+ .logo-desktop{
+    height: 100%;
+ }
+
+ .logo-mobile{
+    height: 100%;
+ }
+ @media (max-width: 767px) {
+    .logo-desktop {
+      display: none;
+    }
+}
+@media (min-width: 768px) { 
+    .logo-mobile{
+        display: none; 
+    }
+ }
+
+ .search-container{
+    display: flex; 
+    align-items: center; 
+ }
+
+ .search-input-container{
+    display: flex; 
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem; 
+    border-width: 1px; 
+    height: 2rem; 
+    border-color: #303030;
+    
+}
+    
+@media (min-width: 768px) {
+    .search-input-container{
+        margin-left: 2.5rem; 
+        height: 2.5rem; 
+        padding-left: 1.25rem; 
+        } 
+}
+
+.search-icon-container{
+    justify-content: center; 
+    align-items: center; 
+    width: 2.5rem; 
+    display: none; 
+}
+
+.icon1{
+    font-size: 1.25rem;
+    line-height: 1.75rem; 
+    color: #ffffff;
+}
+
+.search-input{
+    padding-right: 1.25rem; 
+    padding-left: 1.25rem; 
+    outline-style: none; 
+    width: 11rem; 
+    color: #ffffff; 
+    background-color: transparent; 
+    
+}
+    
+@media (min-width: 768px) { 
+    .search-input{
+        padding-left: 0; 
+        width: 16rem; 
+        }
+}
+    @media (min-width: 1024px) { 
+        .search-input{
+            width: 500px;
+        }
+}
+
+.search-button{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem; 
+    border-width: 1px; 
+    border-left-width: 0; 
+    height: 2rem; 
+    width: 40px;
+    border-color: #303030;
+}
+    
+    
+@media (min-width: 768px) { 
+    .search-button{
+        height: 2.5rem; 
+        width: 60px;
+     }
+}
+
+.user-icons-container{
+    display: flex; 
+    align-items: center; 
+}
+
+.user{
+    display: none; 
+}
+
+@media (min-width: 768px) { 
+    .user{
+        display: flex; 
+    }
+}
+    
+.user-icon{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 50%; 
+    width: 2.5rem; 
+    height: 2.5rem; 
+}
+.user-icon :hover {
+     background: #303030;
+}
+
+.iconUser{
+    font-size: 1.25rem;
+    line-height: 1.75rem; 
+    color: #ffffff; 
+    cursor: pointer; 
+    
+}
+
+.user-icon-2{
+    display: flex; 
+    margin-left: 0.5rem; 
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 50%; 
+    width: 2.5rem; 
+    height: 2.5rem; 
+   
+}
+.user-icon-2:hover {
+     background: #303030;
+     }
+
+.user-avatar-container{
+    display: flex; 
+    overflow: hidden; 
+    border-radius: 9999px; 
+    width: fit-content; 
+    height: 2rem; 
+    margin-top: 5px;
+}
+    
+    
+@media (min-width: 768px) { 
+    .user-avatar-container{
+        margin-left: 1rem; 
+    }
+}
+
+.login-button {
+    background-color: black;
+    color: white; 
+    padding-bottom: 15px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    font-weight: bold; 
+    text-decoration: none; 
+    width: 8rem;
+  }
+  
+  
+  .login-button:hover {
+    background-color: #333; 
+  }
+
+  @media (max-width: 768px) { 
+    .login-button{
+        display: inline-block;
+    }
+}
+  
+
+
