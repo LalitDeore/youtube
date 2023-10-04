@@ -25,7 +25,7 @@ const Signup = () => {
     }
 
     // Make a POST request to the backend
-    Axios.post("http://localhost:3001/signup", {
+    Axios.post("https://youtube-backend-b65q.onrender.com/signup", {
       name: name,
       middlename: middleName,
       surname: surname,
