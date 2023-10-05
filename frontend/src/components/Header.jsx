@@ -36,8 +36,7 @@ const Header = () => {
   const pageName = pathname?.split("/")?.filter(Boolean)?.[0];
 
   const openLoginPage = () => {
-    setUser(true);
-    navigate("/signUp");
+    navigate("/SignUP");
   };
   const logoutUser = () => {
     setIsLogIn(false);
@@ -108,14 +107,14 @@ const Header = () => {
                 </button>
               </>
             ) : (
-              <Link
+              <button
                 to="/signUp"
                 className="login-button"
                 onClick={openLoginPage}
                 style={{ marginLeft: "10px" }}
               >
                 SignUp
-              </Link>
+              </button>
             )}
           </div>
         </div>
