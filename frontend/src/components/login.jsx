@@ -9,7 +9,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-  const { setLoading } = useContext(Context);
+  const { setLoading, setIsLogIn } = useContext(Context);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -28,6 +28,7 @@ const Login = () => {
         setLoading(true);
         navigate("/");
         setLoading(false);
+        setIsLogIn(true);
       })
       .catch((error) => {
         console.log(error);

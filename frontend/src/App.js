@@ -14,14 +14,35 @@ const App = () => {
     <AppContext>
       <BrowserRouter>
         <div className="flex flex-col h-full">
-          <Header />
           <Routes>
-            <Route path="/" exact element={<Feed />} />
+            <Route
+              path="/"
+              exact
+              element={
+                <>
+                  <Header />
+                  <Feed />
+                </>
+              }
+            />
             <Route
               path="/searchResult/:searchQuery"
-              element={<SearchResult />}
+              element={
+                <>
+                  <Header />
+                  <SearchResult />
+                </>
+              }
             />
-            <Route path="/video/:id" element={<VideoDetails />} />
+            <Route
+              path="/video/:id"
+              element={
+                <>
+                  <Header />
+                  <VideoDetails />
+                </>
+              }
+            />
             <Route path="/signUp" element={<Signup />} />
             <Route path="/login" element={<Login />} />
           </Routes>

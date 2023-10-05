@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Axios from "axios";
 import { useNavigate, useLocation } from "react-router-dom";
-
+import { Context } from "../context/contextApi";
 import "../components css/signup.css";
 
 const Signup = () => {
@@ -11,6 +11,8 @@ const Signup = () => {
   const [mobileNO, setMobileNO] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const { setIsLogIn } = useContext(Context);
 
   const location = useLocation();
   const isLoginPage = location.pathname === "/login";
@@ -35,6 +37,7 @@ const Signup = () => {
     })
       .then((response) => {
         console.log(response);
+        setIsLogIn(true);
         alert("Signup successful");
         navigate("/");
       })
@@ -50,7 +53,7 @@ const Signup = () => {
 
   return (
     <>
-      {isLoginPage ? ( // If isLoginPage is true, display the "click here" button
+      {isLoginPage ? (
         <div className="login-button-container">
           <button className="login-button" onClick={loginHandler}>
             Click Here to Login

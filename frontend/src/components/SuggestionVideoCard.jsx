@@ -11,11 +11,7 @@ const SuggestionVideoCard = ({ video }) => {
     <Link to={`/video/${video?.videoId}`}>
       <div className="suggestion-video-card">
         <div className="suggestion-video-thumbnail">
-          <img
-            className="thumbnail-image"
-            src={video?.thumbnails[0]?.url}
-            alt="Video Suggestion"
-          />
+          <img className="thumbnail-image" src={video?.thumbnails[0]?.url} />
           {video?.lengthSeconds && <VideoLength time={video?.lengthSeconds} />}
         </div>
         <div className="suggestion-video-info">
@@ -23,7 +19,7 @@ const SuggestionVideoCard = ({ video }) => {
           <span className="video-author-info">
             {video?.author?.title}
             {video?.author?.badges[0]?.type === "VERIFIED_CHANNEL" && (
-              <BsFillCheckCircleFill className="verified-icon" />
+              <BsFillCheckCircleFill className="video-stats" />
             )}
           </span>
           <div className="video-stats">

@@ -15,7 +15,7 @@ const Feed = () => {
     <div className="custom-feed-row">
       <LeftNav />
       <div className="custom-grow custom-content-container">
-        <div className="custom-grid-columns custom-gap custom-padding">
+        <div className="custom-grid-columns custom-gap custom-padding ">
           {!loading &&
             searchResults.map((item) => {
               if (item.type !== "video") return false;

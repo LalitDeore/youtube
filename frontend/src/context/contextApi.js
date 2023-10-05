@@ -9,15 +9,7 @@ export const AppContext = (props) => {
   const [selectedCategory, setSelectedCategory] = useState("New");
   const [mobileMenu, setMobileMenu] = useState(false);
   const [token, setToken] = useState("");
-  const [user, setUser] = useState(false);
-
-  const loginUser = () => {
-    setUser(true);
-  };
-
-  const logoutUser = () => {
-    setUser(false);
-  };
+  const [isLogIn, setIsLogIn] = useState(false);
 
   useEffect(() => {
     fetchSelectedCategoryData(selectedCategory);
@@ -44,10 +36,8 @@ export const AppContext = (props) => {
         setMobileMenu,
         token,
         setToken,
-        user,
-        setUser,
-        loginUser,
-        logoutUser,
+        isLogIn,
+        setIsLogIn,
       }}
     >
       {props.children}

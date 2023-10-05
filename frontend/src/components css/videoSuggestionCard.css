@@ -1,137 +1,129 @@
 .suggestion-video-card {
-    display: flex;
-    margin-bottom: 0.75rem;
-  }
-  
+  display: flex;
+  margin-bottom: 0.75rem;
+}
+
+
+.suggestion-video-thumbnail {
+  height: 6rem;
+  width: 10rem;
+  min-width: 168px;
+  border-radius: 0.75rem;
+  background-color: #1f2d3d;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
   .suggestion-video-thumbnail {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    flex-shrink: 0;
-    border-radius: 0.75rem;
-    width: 100%;
-    height: 12rem;
+    height: 5rem;
+    width: 8rem;
+    min-width: 128px;
   }
-  
-  @media (min-width: 1024px) {
-    .suggestion-video-thumbnail {
-        width: 8rem; 
-        height: 5rem; 
-    }
+}
+
+@media (min-width: 1280px) {
+  .suggestion-video-thumbnail {
+    height: 6rem;
+    width: 10rem;
+    min-width: 168px;
   }
-  
-  @media (min-width: 1024px) {
-    .suggestion-video-thumbnail {
-        width: 10rem; 
-        height: 6rem; 
-    }
-  }
-  
-  .thumbnail-image {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .suggestion-video-info {
-    display: flex;
-    overflow: hidden;
-    margin-left: 0.75rem;
-    flex-direction: column;
-  }
-  
+}
+
+
+
+.thumbnail-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.suggestion-video-info {
+  display: flex;
+  overflow: hidden;
+  margin-left: 0.75rem;
+  flex-direction: column;
+}
+
+.video-title {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+@media (min-width: 1024px) {
   .video-title {
-    font-size: 0.875rem;
-    line-height: 1.25rem; 
-    font-weight: 700; 
-    color: #ffffff; 
+      font-size: 0.75rem;
+      line-height: 1rem;
+      display: flex;
+      margin-top: 0.5rem;
+      align-items: center;
+      font-weight: 600;
+      color: white;
   }
+}
 
+.video-author-info {
+  font-size: 12px;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+}
 
-  @media (min-width: 1024px) {
-    .video-title {
-        font-size: 0.75rem;
-        line-height: 1rem;
-    }
-  }
-   
-  @media (min-width: 1024px) {
-    .video-title {
-        display: flex; 
-        margin-top: 0.5rem; 
-        align-items: center; 
-        font-weight: 600; 
-        color: white;
-    }
-  }
-
+@media (min-width: 1024px) {
   .video-author-info {
-    display: flex; 
-margin-top: 0.5rem; 
-align-items: center; 
-font-weight: 600; 
-color: white;
+    font-size: 10px;
   }
-
-  @media (min-width: 1024px) {
-    .video-author-info {
-        color: white;
-    }
-  }
-
-  
-  .verified-icon {
-    margin-left: 0.25rem;
-    color: #ffffff;
-  }
-
-  @media (min-width: 1024px) { 
-   .verified-icon {
-        color: #ffffff;
-    }
 }
-  
-   @media (min-width: 1080px) { 
-    .verified-icon {
-        color: #ffffff;
-    }
+
+@media (min-width: 1280px) {
+  .video-author-info {
+    font-size: 12px;
+  }
 }
-  
+
+
+.verified-icon {
+  margin-left: 0.25rem;
+  color: #ffffff;
+}
+
+
+.video-stats {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  margin-left: 1rem;
+}
+
+@media (min-width: 1024px) {
   .video-stats {
-      display: flex; 
-      overflow: hidden; 
-      font-weight: 600; 
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap; 
-      color: white;
+    font-size: 10px;
+    margin-left: 0rem;
   }
+}
 
-  @media (min-width: 1024px) { 
-    .video-stats{
-        color: #ffffff;
-    }
-}
-@media (min-width: 1080px) { 
-    .video-stats{
-        color: #ffffff;
-    }
-}
-  
-  .video-dot {
-      position: relative; 
-      margin-left: 0.25rem;
-      margin-right: 0.25rem; 
-      font-weight: 700; 
-      line-height: 1; 
-      display: flex; 
-      color: white;
-      top: -10px;
+@media (min-width: 1280px) {
+  .video-stats {
+    font-size: 12px;
   }
-  
-  .video-published-time {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  
+}
+
+
+.video-dot {
+  position: relative;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  font-weight: 700;
+  line-height: 1;
+  display: flex;
+  color: white;
+  top: -10px;
+}
+
+.video-published-time {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
