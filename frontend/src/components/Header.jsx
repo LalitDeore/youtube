@@ -48,15 +48,16 @@ const Header = () => {
       <div className="header-container">
         {loading && <Loader />}
 
-        <div className="logo-container">
+        <div className="flex h-5 items-center">
           {pageName !== "video" && (
-            <div className="mobile-menu-toggle " onClick={mobileMenuToggle}>
+            <div
+              className="flex md:hidden md:mr-6 cursor-pointer items-center justify-center h-10 w-10 rounded-full hover:bg-[#303030]/[0.6]"
+              onClick={mobileMenuToggle}
+            >
               {mobileMenu ? (
-                <>
-                  <CgClose className="icon" />
-                </>
+                <CgClose className="text-white text-xl" />
               ) : (
-                <SlMenu className="icon" />
+                <SlMenu className="text-white text-xl" />
               )}
             </div>
           )}
