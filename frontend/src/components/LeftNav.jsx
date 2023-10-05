@@ -5,8 +5,6 @@ import LeftNavMenuItem from "./LeftNavMenuItem";
 import { categories } from "../utils/constants";
 import { Context } from "../context/contextApi";
 
-import "../components css/leftNav.css";
-
 const LeftNav = () => {
   const { selectedCategory, setSelectedCategory, mobileMenu } =
     useContext(Context);
@@ -32,7 +30,7 @@ const LeftNav = () => {
         mobileMenu ? "translate-x-0" : ""
       }`}
     >
-      <div className="left-nav">
+      <div className="flex px-5 flex-col">
         {categories.map((item) => {
           return (
             <React.Fragment key={item.name}>
@@ -47,12 +45,14 @@ const LeftNav = () => {
                   selectedCategory === item.name ? "bg-white/[0.15]" : ""
                 }`}
               />
-              {item.divider && <hr className="nav-item" />}
+              {item.divider && <hr className="my-5 border-white/[0.2]" />}
             </React.Fragment>
           );
         })}
-        <hr className=" nav-item-text" />
-        <div className="nav-item-text-content">Made by: Lalit Deore</div>
+        <hr className="my-5 border-white/[0.2]" />
+        <div className="text-white/[0.5] text-[12px]">
+          Clone by: JS Dev Hindi
+        </div>
       </div>
     </div>
   );
