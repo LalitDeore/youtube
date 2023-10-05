@@ -29,33 +29,26 @@ db.connect((err) => {
 });
 
 app.use(bodyParser.json());
-// Initialize Express app
 app.use(cors());
 app.use(cookieParser());
-
-// Use cookie-parser middleware to parse cookies
 app.use(cookieParser());
-
-// Use express-session middleware to manage sessions (optional but recommended)
 app.use(
   session({
-    secret: "12345678", // Change this to a secret key
+    secret: "12345678",
     resave: false,
     saveUninitialized: true,
   })
 );
 
 session({
-  secret: "your-secret-key", // Change this to a secret key
+  secret: "12345678",
   resave: false,
   saveUninitialized: true,
 });
 
-// Route for handling user registration
 app.post("/signup", (req, res) => {
   const { name, middlename, surname, email, password, mobile } = req.body;
 
-  // Hash the user's password
   bcrypt.hash(password, 10, (err, hashedPassword) => {
     if (err) {
       console.error("Error hashing password: ", err);
@@ -65,25 +58,21 @@ app.post("/signup", (req, res) => {
 
       db.query(
         registrationQuery,
-        [name, middlename, surname, email, hashedPassword, mobile], // Use the hashed password
+        [name, middlename, surname, email, hashedPassword, mobile],
         (err, result) => {
           if (err) {
             console.error("Error registering user: ", err);
             res.status(500).json({ message: "Error registering user" });
           } else {
-            // After successful registration, create a JWT token for the user
             const userObject = {
               name,
               email,
-              // Add other user details as needed
             };
 
-            // Replace "your-secret-key" with a strong, secret key
-            const token = jwt.sign(userObject, "your-secret-key", {
-              expiresIn: "1h", // Set the expiration time for the token
+            const token = jwt.sign(userObject, "12345678", {
+              expiresIn: "1h",
             });
 
-            // Set the JWT token as an HTTP-only cookie
             res.cookie("token", token, { httpOnly: true });
 
             console.log("User registered successfully");
@@ -95,7 +84,6 @@ app.post("/signup", (req, res) => {
   });
 });
 
-// Route for handling user login
 app.post("/login", (req, res) => {
   const { email, password } = req.body;
 
@@ -109,25 +97,20 @@ app.post("/login", (req, res) => {
       if (result.length > 0) {
         const user = result[0];
 
-        // Compare the provided password with the hashed password from the database
         bcrypt.compare(password, user.password, (bcryptErr, passwordMatch) => {
           if (bcryptErr || !passwordMatch) {
             console.log("Invalid credentials");
             res.status(401).json({ message: "Invalid credentials" });
           } else {
-            // Passwords match, generate a JWT token
             const userObject = {
               name: user.NAME,
               email: user.email_id,
-              // Add other user details as needed
             };
 
-            // Replace "your-secret-key" with a strong, secret key
-            const token = jwt.sign(userObject, "your-secret-key", {
-              expiresIn: "1h", // Set the expiration time for the token
+            const token = jwt.sign(userObject, "12345678", {
+              expiresIn: "1h",
             });
 
-            // Set the JWT token as an HTTP-only cookie
             res.cookie("token", token, { httpOnly: true });
 
             console.log("Login successful");
