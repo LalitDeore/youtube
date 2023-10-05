@@ -111,6 +111,7 @@ const Header = () => {
                 to="/signUp"
                 className="login-button"
                 onClick={openLoginPage}
+                style={{ marginLeft: "10px" }}
               >
                 SignUp
               </Link>
